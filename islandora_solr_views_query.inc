@@ -162,6 +162,8 @@ class islandora_solr_views_query extends views_plugin_query {
 
       // Add query (defaults to *:*).
       $islandora_solr_query->buildQuery($query, $params);
+      // Remove Solr base searching filters.
+      $islandora_solr_query->solrParams = islandora_solr_remove_base_filters($islandora_solr_query->solrParams);
       // Need to add the fl in manually as buildQuery does not account for it.
       $islandora_solr_query->solrParams['fl'] = $params['fl'];
       // Add solr limit.
