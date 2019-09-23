@@ -56,7 +56,7 @@ function islandora_solr_views_views_data() {
       'handler' => 'islandora_solr_views_handler_argument',
     ),
     'filter' => array(
-      'handler' => 'islandora_solr_views_handler_filter',
+      'handler' => 'islandora_solr_views_handler_filter_select',
     ),
     'sort' => array(
       'handler' => 'islandora_solr_views_handler_sort',
@@ -123,7 +123,7 @@ function islandora_solr_views_views_data() {
     );
     // Filter handler.
     $field['filter'] = array(
-      'handler' => 'islandora_solr_views_handler_filter',
+      'handler' => 'islandora_solr_views_handler_filter_select',
     );
     // Sortable handler.
     // Check if sortable: must be indexed and can't be multivalued.
